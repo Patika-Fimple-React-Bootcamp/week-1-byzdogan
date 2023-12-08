@@ -1,0 +1,116 @@
+:root {
+    --bg-color: rgb(243, 247, 248);
+    --header-bg: rgb(25, 95, 224);
+    --task-bg: rgba(25, 95, 224, 0.397);    
+}
+
+body {
+    background-color: var(--bg-color);
+    margin: 50px;
+    font-size: 20px;
+}
+
+header {
+    background-color: var(--header-bg);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+}
+
+#headerText {
+    color: white;
+    font-size: 2em;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 100px 50px;
+    gap: 50px;
+}
+
+/* Left side of the screen */
+.taskForm {
+    flex: 1;
+    padding: 50px;
+    border: 1px solid var(--header-bg);
+    border-radius: 5px;
+}
+
+label {
+    font-weight: bold;
+    color: var(--header-bg);
+}
+
+#taskText {
+    width: 100%;
+}
+
+/* Right side of the screen */
+.todoList {
+    flex: 2;
+    padding: 50px;
+    border: 1px solid var(--header-bg);
+    border-radius: 5px;
+    height: 400px;
+    overflow: auto;
+}
+
+li {
+    margin-bottom: 15px;
+    border: 1px solid var(--header-bg);
+    border-radius: 5px;
+    padding: 5px;
+    overflow:hidden;
+    text-overflow: ellipsis;
+}
+
+input[type=checkbox] {
+    height: 20px;
+    width: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.list li:nth-child(odd){
+    background-color: var(--task-bg);
+}
+
+/* Task Input */
+#taskText {
+    border: 1px solid var(--header-bg);
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+    height: 50px;
+}
+
+#taskText:focus {
+    border: 3px solid var(--header-bg);
+    background-color: var(--task-bg);
+    color: white;
+}
+
+/* Button */
+#addTask{
+    border: 1px solid var(--header-bg);
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px auto;
+    color: var(--header-bg);
+    background-color: var(--bg-color);
+    cursor: pointer;
+    display: block;
+}
+
+#addTask:hover{
+    background-color: var(--header-bg);
+    border: 2px solid white;
+    color: white;    
+}
