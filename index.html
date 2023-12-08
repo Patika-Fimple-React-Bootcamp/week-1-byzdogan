@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO DO LIST</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1 id="headerText">TO DO LIST</h1>
+    </header>
+    <main>
+        <section class="taskForm">
+            <form id="taskForm" onsubmit="return false">
+                <label for="taskText">Enter a new task</label>
+                <input type="text" name="task" id="taskText"> <br>
+                <label for="isDone">Completed</label>
+                <input type="checkbox" name="checkTask" value="false" id="isDone">
+                <input type="submit" id="addTask" value="Add Task">
+            </form>
+        </section>
+        <!-- To Do list start -->
+        <section class="todoList">
+            <ul class="list">
+            </ul>
+        </section>
+        <!-- To Do list finish -->
+    </main>    
+</body>
+</html>
